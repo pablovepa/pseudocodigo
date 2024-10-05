@@ -1,36 +1,49 @@
 Proceso calculadora
+	definir operacion Como Entero
+	definir numero1,numero2,resultado como real
 	Escribir "Bienvenid@ a la calculdora de Sebastián"
-	Escribir "Para suma escriba:"
-	Escribir "1 para suma"
-	Escribir "2 para resta"
-	Escribir "3 para multiplicacion"
-	Escribir "4 para division"
+	Escribir "Elija operacion a realizar:"
+	Escribir "1:Suma"
+	Escribir "2:Resta"
+	Escribir "3:Multiplicacion"
+	Escribir "4:Division"
 	//aqui se lee la operacion
 	Leer operacion
 	//aqui se verifica que el usuario ingreso una funcion valida//
-	si operacion>0 y operacion<5 Entonces
-		Escribir "ingrese el primer número"
-		Leer numero1
-		Escribir "Ingrese el segundo número"
-		Leer numero2 
-		Si operacion=1 Entonces 
-			Escribir "el resultado de la suma es"
+	segun  operacion hacer
+		1:
+			escribir "Ingrese primer numero"
+			leer numero1
+			escribir "Ingrese segundo numero"
+			leer numero2
 			resultado=numero1+numero2
-		Fin Si
-		Si operacion=2 Entonces
-			Escribir "el resultado de la resta es"
+			Escribir "El resultado de la suma es:" resultado
+			
+		2:
+			escribir "Ingrese primer numero"
+			leer numero1
+			escribir "Ingrese segundo numero"
+			leer numero2
 			resultado=numero1-numero2
-		FinSi
-		Si operacion=3 Entonces
-			Escribir "el resulado de la multiplicación"
+			Escribir "El resultado de la resta es:" resultado
+			
+		3:
+			escribir "Ingrese primer numero"
+			leer numero1
+			escribir "Ingrese segundo numero"
+			leer numero2
 			resultado=numero1*numero2
-		FinSi
-		Si operacion=4 Entonces
-			Escribir "el resultado de la división es"
+			Escribir "El resultado de la multiplicacion es:" resultado
+			
+		4:
+			escribir "Ingrese primer numero"
+			leer numero1
+			escribir "Ingrese segundo numero"
+			leer numero2
 			resultado=numero1/numero2
-		FinSi
-		Escribir resultado
-	Sino
-		Escribir "esa no es una operación válida"
-	FinSi
+			Escribir "El resultado de la division es:" resultado
+			
+		De Otro Modo:
+			escribir "Operacion no valida"
+	FinSegun
 FinProceso
